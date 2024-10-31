@@ -36,18 +36,20 @@
 #define MentorBitRele_h
 
 #include <arduino.h>
+#include <MentorPort.h>
 
-class MentorBitRele
+class MentorBitRele : public MentorPort
 {
     public: 
 
         MentorBitRele(uint8_t pin);
         void activarRele();
         void desactivarRele();
+        void confirPort(const Port& port) override;
 
     private:
 
-        uint8_t _rele_pin;
+        Port _port;
 
 };
 
