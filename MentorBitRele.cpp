@@ -38,7 +38,7 @@
 */
 MentorBitRele::MentorBitRele(uint8_t pin = 0){
     _port.gpios[0] = pin;
-    pinMode(_port.gpios[0], OUTPUT);
+    if(pin) pinMode(_port.gpios[0], OUTPUT);
 }
 
 /*
@@ -61,5 +61,7 @@ void MentorBitRele::confirPort(const Port& port) {
     _port.location = port.location;
     _port.gpios[0] = port.gpios[0];
     _port.gpios[1] = port.gpios[1];
+
+    pinMode(_port.gpios[0], OUTPUT);
 
 }
