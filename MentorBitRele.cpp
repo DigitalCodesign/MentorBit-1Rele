@@ -37,22 +37,22 @@
     Constructor, se debe indicar el pin al cual se esta conectando el modulo rele
 */
 MentorBitRele::MentorBitRele(uint8_t pin = 0){
-    _port.gpios[0] = pin;
-    if(pin) pinMode(_port.gpios[0], OUTPUT);
+    _port.gpios[1] = pin;
+    if(pin) pinMode(_port.gpios[1], OUTPUT);
 }
 
 /*
     Funcion que permite activar la bobina del rele
 */
 void MentorBitRele::activarRele(){
-    digitalWrite(_port.gpios[0], HIGH);
+    digitalWrite(_port.gpios[1], HIGH);
 }
 
 /*
     Funcion que permite desactivar la bobina del rele
 */
 void MentorBitRele::desactivarRele(){
-    digitalWrite(_port.gpios[0], LOW);
+    digitalWrite(_port.gpios[1], LOW);
 }
 
 void MentorBitRele::confirPort(const Port& port) {
