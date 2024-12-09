@@ -55,7 +55,7 @@ void MentorBitRele::desactivarRele(){
     digitalWrite(_port.gpios[1], LOW);
 }
 
-void MentorBitRele::confirPort(const Port& port) {
+void MentorBitRele::configPort(const Port& port) {
 
     _port.type = port.type;
     _port.location = port.location;

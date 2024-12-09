@@ -42,10 +42,10 @@ class MentorBitRele : public MentorPort
 {
     public: 
 
-        MentorBitRele(uint8_t pin);
+        MentorBitRele(uint8_t pin = 0);
         void activarRele();
         void desactivarRele();
-        void confirPort(const Port& port) override;
+        void configPort(const Port& port) override;
 
     private:
 
