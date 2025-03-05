@@ -42,4 +42,3 @@ La librería `MentorBitRele` facilita el control de módulos relé de un canal c
 
 * `void activarRele()`: Activa el relé conectado.
 * `void desactivarRele()`: Desactiva el relé conectado.
-* `void configPort(const Port& port)`: Configura el puerto del módulo relé con la información proporcionada en el objeto `Port`. Esto incluye el tipo de puerto, su ubicación y los pines GPIO asociados.
