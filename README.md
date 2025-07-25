@@ -44,7 +44,7 @@ Usar la librería es muy sencillo. Solo sigue estos pasos para tener tu módulo 
 
 ### 1. **Conexión del Módulo**
 
-Conecta tu módulo de relé al puerto marcado como ***SIG*** en uno de los puertos digitales disponibles en la placa (JST de 4 pines en la sección de "Puertos para Módulos"). Este puerto se encargará de encender o apagar el relé según lo que programes.
+Conecta el módulo de 1 relés a uno de los puertos JST de 4 pines de la sección de "Puertos para Módulos" en la placa MentorBit. Usa un pin digital para controlar el relé.
 
 ### 2. **Instalación de las Librerías**
 
