@@ -43,13 +43,14 @@
  * Asigna el pin de control y, por seguridad, asegura que el relé comience apagado.
  * @param pin Pin digital utilizado para excitar la bobina del relé (por defecto 0).
  */
-MentorBitRele::MentorBitRele(uint8_t pin) {
+MentorBitRele::MentorBitRele(uint8_t pin) : _estado_actual(false) {
 
     _port.gpios[1] = pin;
 
-    pinMode(_port.gpios[1], OUTPUT);
-    desactivarRele();
-    _estado_actual = false;
+    if (pin) {
+        pinMode(_port.gpios[1], OUTPUT);
+        desactivarRele();
+    }
 
 }
 
